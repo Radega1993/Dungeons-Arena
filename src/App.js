@@ -36,7 +36,7 @@ function App() {
                   <select required className="form-control login__yellow_inputs" name="rLevel" defaultValue={'DEFAULT'} onChange={handleLevel}>
                     <option value="DEFAULT" disabled>Nivel*</option>
                     <option value="1">1-3</option>
-                    <option value="4">4-6</option>
+                    <option value="4">4-7</option>
                   </select>
                 </div>
               </div>
