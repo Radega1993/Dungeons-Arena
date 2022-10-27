@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  app-dungeons-arena:
+    container_name: app-dungeons-arena
+    build: .
+    restart: unless-stopped
+    ports:
+      - "8100:80"
+    labels:
+      - traefik.enable=true
+      - traefik.frontend.rule=Host:api-dungeons-arena.paraanime.com
+      - traefik.port=80
+      - traefik.docker.network=web
+      - traefik.frontend.protocol=http
+      - traefik.frontend.entryPoints=http,https
+      - traefik.frontend.redirect.regex=^api-dungeons-arena.paraanime.com([/](.*))*
+      - traefik.frontend.redirect.replacement=https://api-dungeons-arena.paraanime.com$${1}
+      - traefik.frontend.redirect.permanent=true
+    networks:
+      - web
+
+networks:
+  web:
+    external: true

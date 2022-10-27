@@ -284,9 +284,8 @@ export const DadosUno = () => {
           <div className="row">
 
               <div className="col-md-12 login__form-2">
-                  <h3>Calculadora de daño</h3>
                   <form onSubmit={ handleRegister }>
-                    <div className="form-row">
+                    <div className="form-row mt-5 text-center">
                       <h3>Amarillos</h3>
                       <div className="form-group col">
                         <input
@@ -340,7 +339,7 @@ export const DadosUno = () => {
                       </div>
                     </div>
 
-                    <div className="form-row">
+                    <div className="form-row mt-3 text-center">
                       <h3>Naranja</h3>
                       <div className="form-group col">
                         <input
@@ -394,7 +393,7 @@ export const DadosUno = () => {
                       </div>
                     </div>
 
-                    <div className="form-row">
+                    <div className="form-row mt-3 text-center">
                       <h3>Rojo</h3>
                       <div className="form-group col">
                         <input
@@ -448,7 +447,7 @@ export const DadosUno = () => {
                       </div>
                     </div>
 
-                    <div className="form-row">
+                    <div className="form-row mt-3 text-center">
                       <h3>Lila</h3>
                       <div className="form-group col">
                         <input
@@ -503,7 +502,7 @@ export const DadosUno = () => {
                     </div>
 
                     <br/>
-                    <div className="form-group text-center">
+                    <div className="form-group text-center mt-3 mb-5">
                         <input
                             type="submit"
                             className="btnSubmit login__yellow_inputs"

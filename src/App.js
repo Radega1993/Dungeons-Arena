@@ -24,34 +24,36 @@ function App() {
 
   return (
 
-    <div className="App">
-      <div className="container login__container animate__animated animate__fadeInLeft">
+    <div className="container">
+      <div className=" login__container d-flex justify-content-center">
         <div className="row">
 
           <div className="col-md-12 login__form-2">
-            <h1>Calculadora de daño</h1>
-            <form onSubmit={ handleRegister }>
-              <div className="form-row">
-                <div className="form-group col">
-                  <select required className="form-control login__yellow_inputs" name="rLevel" defaultValue={'DEFAULT'} onChange={handleLevel}>
-                    <option value="DEFAULT" disabled>Nivel*</option>
-                    <option value="1">1-3</option>
-                    <option value="4">4-7</option>
-                  </select>
+            <h1 className='text-center mt-5'>Calculadora de daño</h1>
+            <div className='d-flex aligns-items-center justify-content-center'>
+              <form onSubmit={ handleRegister }>
+                <div className="form-row">
+                  <div className="form-group mt-4 col">
+                    <h2 className='text-center'>Escoge Nivel</h2>
+                    <select required className="form-control className='text-center'" name="rLevel" defaultValue={'DEFAULT'} onChange={handleLevel}>
+                      <option className='text-center' value="DEFAULT" disabled>Nivel*</option>
+                      <option className='text-center' value="1">1-3</option>
+                      <option className='text-center' value="4">4-7</option>
+                    </select>
+                    {rLevel === "1" ? (
+                      <DadosUno/>
+                    ) : rLevel === "4" ? (
+                      <DadosCuatro/>
+                    ) : (
+                      <h3 className='text-center'>Nivel no escogido</h3>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-        {rLevel === "1" ? (
-          <DadosUno/>
-        ) : rLevel === "4" ? (
-          <DadosCuatro/>
-        ) : (
-          <h2>Escoge Nivel</h2>
-        )}
-        
     </div>
   );
 }
