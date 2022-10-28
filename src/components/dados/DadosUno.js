@@ -274,7 +274,6 @@ export const DadosUno = () => {
         resultado = resultado + 2;
       }
     }
-
     Swal.fire('Bien hecho', `Tu daño es: ${resultado}`, 'success');
   }
 

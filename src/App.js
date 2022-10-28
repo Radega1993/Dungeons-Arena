@@ -40,17 +40,17 @@ function App() {
                       <option className='text-center' value="1">1-3</option>
                       <option className='text-center' value="4">4-7</option>
                     </select>
-                    {rLevel === "1" ? (
-                      <DadosUno/>
-                    ) : rLevel === "4" ? (
-                      <DadosCuatro/>
-                    ) : (
-                      <h3 className='text-center'>Nivel no escogido</h3>
-                    )}
                   </div>
                 </div>
               </form>
             </div>
+              {rLevel === "1" ? (
+                <DadosUno/>
+              ) : rLevel === "4" ? (
+                <DadosCuatro/>
+              ) : (
+                <h3 className='text-center'>Nivel no escogido</h3>
+              )}
           </div>
         </div>
       </div>

@@ -658,7 +658,7 @@ export const DadosCuatro = () => {
 
                     <br/>
                     <div className="form-group text-center mt-3 mb-5">
-                        <input
+                    <input
                             type="submit"
                             className="btnSubmit login__yellow_inputs"
                             value="Calcular Daño" />
